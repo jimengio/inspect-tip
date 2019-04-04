@@ -20,6 +20,9 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+    alias: {
+      "inspect-tip$": path.resolve(__dirname, "../src/inspect-tip.tsx"),
+    },
   },
   devServer: {
     contentBase: __dirname,
