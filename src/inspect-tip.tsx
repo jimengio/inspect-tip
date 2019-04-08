@@ -54,9 +54,9 @@ let styleContainer = css`
   bottom: 8px;
   left: 8px;
   background-color: hsla(0, 0%, 0%, 0.6);
-  padding: 2px 4px;
+  padding: 4px;
   color: white;
-  font-family: Source Code Pro, Menlo;
+  font-family: Roboto Mono, Menlo, monospace;
   word-break: break-all;
   word-wrap: break-word;
   font-size: 12px;
@@ -65,6 +65,7 @@ let styleContainer = css`
   cursor: pointer;
   transition-duration: 240ms;
   opacity: 0.3;
+  white-space: pre;
 
   &:hover {
     opacity: 1;
