@@ -11,6 +11,9 @@ yarn add @jimengio/inspect-tip
 ```
 
 ```tsx
+import InspectTip from "@jimengio/inspect-tip";
+
+
 <InspectTip text="debug text" data={{ data: "demo data" }} className={styleTip} />
 <InspectTip text={["Chunks", null, "of", null, "data"]} data={{ data: "demo " }} className={styleChunksTip} />
 ```

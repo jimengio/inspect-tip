@@ -5,7 +5,7 @@ import InspectTip from "inspect-tip";
 export default (props) => {
   return (
     <div className={styleContainer}>
-      <div className={styleTitle}>Container</div>
+      <div className={styleTitle}>Demo of inspect-tip, open Console and click the tips</div>
 
       <InspectTip text="debug text" data={{ data: "demo data" }} className={styleTip} />
       <InspectTip text={["Chunks", null, "of", null, "data"]} data={{ data: "demo " }} className={styleChunksTip} />
