@@ -5,6 +5,7 @@ typings/
 dist/
 webpack/dll/*
 .awcache/
+lib/*
 
 .DS_Store
 *.swp

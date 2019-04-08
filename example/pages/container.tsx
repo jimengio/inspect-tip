@@ -1,27 +1,14 @@
 import React from "react";
-import { parseRoutePath, IRouteParseResult } from "@jimengio/ruled-router";
 import { css } from "emotion";
-
-import Home from "./home";
-import Content from "./content";
-
-const renderChildPage = (routerTree: IRouteParseResult) => {
-  if (routerTree != null) {
-    switch (routerTree.name) {
-      case "home":
-        return <Home />;
-      case "content":
-        return <Content />;
-    }
-  }
-  return <div>NOTHING</div>;
-};
+import InspectTip from "inspect-tip";
 
 export default (props) => {
   return (
     <div className={styleContainer}>
       <div className={styleTitle}>Container</div>
-      {renderChildPage(props.router)}
+
+      <InspectTip text="debug text" data={{ data: "demo data" }} className={styleTip} />
+      <InspectTip text={["Chunks", null, "of", null, "data"]} data={{ data: "demo " }} className={styleChunksTip} />
     </div>
   );
 };
@@ -32,4 +19,10 @@ const styleContainer = css`
 
 const styleTitle = css`
   margin-bottom: 16px;
+`;
+
+let styleTip = css``;
+
+let styleChunksTip = css`
+  left: 200px;
 `;

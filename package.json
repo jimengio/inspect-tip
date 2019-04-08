@@ -1,8 +1,9 @@
 {
-  "name": "mst-workflow",
-  "version": "1.0.0",
+  "name": "@jimengio/inspect-tip",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/inspect-tip.js",
+  "types": "./lib/inspect-tip.d.ts",
   "scripts": {
     "dev": "webpack-dev-server --hot --config webpack/dev.js",
     "watch": "webpack-dev-server --hot --config webpack/dev.js",
@@ -11,7 +12,9 @@
     "release": "rm -rfv dist/* && yarn dll-release && time webpack --progress --config webpack/release.js",
     "build": "yarn release",
     "serve": "http-server dist/ -s",
-    "postinstall": "rm -rfv node_modules/@types/*/node_modules/@types/react"
+    "postinstall": "rm -rfv node_modules/@types/*/node_modules/@types/react",
+    "compile": "tsc -d --project tsconfig-compile.json --outDir lib/",
+    "upload": "rsync -rv dist/* fe.jimu.io:~/repo/jimengio/inspect-tip"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,13 @@
+
+dist/*
+example/*
+template.ejs
+tsconfig.json
+tsconfig-compile.json
+webpack/*
+yarn.lock
+
+.awcache/*
+.editorconfig
+.gitattributes
+.prettierrc

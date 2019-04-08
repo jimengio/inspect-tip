@@ -1,10 +1,11 @@
-import React, { SFC } from "react";
+import React, { SFC, CSSProperties } from "react";
 import { cx, css } from "emotion";
 
 interface IProps {
   text: string | any[];
   data: any;
   className?: string;
+  style?: CSSProperties;
   disabled?: boolean;
 }
 
@@ -31,6 +32,7 @@ let InspectTip: SFC<IProps> = (props) => {
   return (
     <div
       className={cx(styleContainer, props.className)}
+      style={props.style}
       onClick={() => {
         let dataString = JSON.stringify(props.data);
         if (dataString.length < 40) {
@@ -49,15 +51,22 @@ export default InspectTip;
 
 let styleContainer = css`
   position: absolute;
-  bottom: 80px;
-  left: 0px;
-  background-color: hsla(0, 0%, 0%, 0.5);
-  padding: 4px 8px;
+  bottom: 8px;
+  left: 8px;
+  background-color: hsla(0, 0%, 0%, 0.6);
+  padding: 2px 4px;
   color: white;
   font-family: Source Code Pro, Menlo;
   word-break: break-all;
   word-wrap: break-word;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.6em;
   white-space: pre-line;
+  cursor: pointer;
+  transition-duration: 240ms;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 1;
+  }
 `;
